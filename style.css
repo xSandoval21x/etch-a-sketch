@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-container {
+    display: grid;
+    height: 600px;
+    width: 600px;
+    outline: 1px solid black;
+}
+
+
