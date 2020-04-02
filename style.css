@@ -6,11 +6,83 @@ body{
     background: rgb(197, 197, 197);
 }
 
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+#dropdown {
+    display: flex;
+}
+
+button {
+    min-width: 50px;
+    min-height: 25px;
+    margin: 0 5px 0 5px;
+    outline: none;
+    background: black;
+    border: 1px solid;
+    color: white;
+}
+
+.colors {
+    display: none;
+    position: relative;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    cursor: pointer;
+}
+
+#red {
+    background: rgb(245, 0, 0);
+}
+
+#orange {
+    background: rgb(255, 145, 0);
+}
+
+#yellow {
+    background: rgb(255, 240, 0);
+}
+
+#green {
+    background: rgb(102, 204, 0);
+}
+
+#blue {
+    background: rgb(0, 0, 240);
+}
+
+#purple {
+    background: rgb(153, 55, 251);
+}
+
+.colors a {
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    color: black;
+    text-decoration: none;
+}
+
+#dropdown:hover .colors {
+    display: grid;
+    grid-template-rows: repeat(2 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    transition: display 2s;
+}
+
+
+
 #grid-container {
     display: grid;
     height: 600px;
     width: 600px;
     outline: 1px solid black;
+    background: white;
 }
+
 
 

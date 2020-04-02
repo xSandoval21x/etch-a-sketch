@@ -7,7 +7,24 @@
 
     <body>
         <h1 id="title">Etch-A-Sketch</h1>
-        <button type="button" name="Reset Grid" id="reset">Reset Grid</button>
+        <div id="buttons">
+            <button type="button" name="Opaque" id="opaque" style="opacity: 0.5;"> Opaque</button>
+            <button type="button" name="Black" id="black">Black</button>
+            <button type="button" name="Rainbow" id="rainbow">Rainbow</button>
+            <div id="dropdown">
+                <button type="button" name="Choose Color" id="color-choice">Choose Color</button>
+                <div class="colors">
+                    <a id="red"></a>
+                    <a id="orange"></a>
+                    <a id="yellow"></a>
+                    <a id="green"></a>
+                    <a id="blue"></a>
+                    <a id="purple"></a>
+                </div>
+            </div>
+            <button type="button" name="Hide Grid" id="hide-grid">Hide Grid</button>
+            <button type="button" name="Reset Grid" id="reset">Reset Grid</button>
+        </div>
         <div id="grid-container">
             
         </div>
