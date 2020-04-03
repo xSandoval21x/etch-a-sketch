@@ -91,17 +91,17 @@ function changeOpaque(){
 }
 
 const blackButton = document.getElementById('black');
-blackButton.addEventListener('click', function(){colorChoice = 'black'});
+blackButton.addEventListener('click', function(){colorChoice = 'black'; document.getElementById('color-choice').style.background = 'rgb(0, 0, 0)'});
 
 const rainbowButton = document.getElementById('rainbow');
-rainbowButton.addEventListener('click', function(){colorChoice = 'rainbow'});
+rainbowButton.addEventListener('click', function(){colorChoice = 'rainbow'; document.getElementById('color-choice').style.background = 'rgb(0, 0, 0)'});
 
-document.getElementById('red').addEventListener('click', function(){colorChoice = 'red'});
-document.getElementById('orange').addEventListener('click', function(){colorChoice = 'orange'});
-document.getElementById('yellow').addEventListener('click', function(){colorChoice = 'yellow'});
-document.getElementById('green').addEventListener('click', function(){colorChoice = 'green'});
-document.getElementById('blue').addEventListener('click', function(){colorChoice = 'blue'});
-document.getElementById('purple').addEventListener('click', function(){colorChoice = 'purple'});
+document.getElementById('red').addEventListener('click', function(){colorChoice = 'red'; document.getElementById('color-choice').style.background = 'rgb(245, 0, 0)'});
+document.getElementById('orange').addEventListener('click', function(){colorChoice = 'orange'; document.getElementById('color-choice').style.background = 'rgb(255, 145, 0)'});
+document.getElementById('yellow').addEventListener('click', function(){colorChoice = 'yellow'; document.getElementById('color-choice').style.background = 'rgb(255, 240, 0)'});
+document.getElementById('green').addEventListener('click', function(){colorChoice = 'green'; document.getElementById('color-choice').style.background = 'rgb(102, 204, 0)'});
+document.getElementById('blue').addEventListener('click', function(){colorChoice = 'blue'; document.getElementById('color-choice').style.background = 'rgb(0, 0, 240)'});
+document.getElementById('purple').addEventListener('click', function(){colorChoice = 'purple'; document.getElementById('color-choice').style.background = 'rgb(153, 55, 251)'});
 
 const hideGridButton = document.getElementById('hide-grid');
 hideGridButton.addEventListener('click', hideGrid);
@@ -124,9 +124,12 @@ const resetButton = document.getElementById('reset');
 resetButton.addEventListener('click', resetGrid);
 
 function resetGrid(){
+    gridSize = prompt('Enter grid size', '16');
+    if(gridSize === null){
+        return;
+    }
     const gridSquares = document.querySelectorAll('div[id=grid-square]');
     gridSquares.forEach(div => gridContainer.removeChild(div));
-    gridSize = prompt('Enter grid size', '16');
     createGrid();
     hideGridButton.textContent = 'Hide Grid';
 }
