@@ -2,7 +2,7 @@
 A web version of an etch-a-sketch
 Project from the Odin Project curriculum
 
-**Features:**
+<h1>**Features:**</h1>
 • Default 16 x 16 canvas
 • Defaults to random colors
 • Choose Color gives the colors of the rainbow as options
